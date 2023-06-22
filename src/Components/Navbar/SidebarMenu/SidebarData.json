@@ -1,0 +1,114 @@
+[
+  {
+    "title": "Software1",
+    "icon": "bi-geer-fill",
+    "items": [
+      {
+        "title": "Page1",
+        "icon": "bi-file-break-fill",
+        "path": "/page1",
+        "items" : [
+          {
+            "title": "Item1",
+            "icon": "bi-file-break-fill",
+            "path": "/"
+          },
+          {
+            "title": "Item2",
+            "icon": "bi-file-break-fill",
+            "path": "/"
+          }
+          
+        ]
+      },
+      {
+        "title": "Page2",
+        "icon": "bi-file-break-fill",
+        "path": "/page2"
+      },
+      {
+        "title": "Page3",
+        "icon": "bi-file-break-fill",
+        "path": "/page3"
+      },
+      {
+        "title": "Page4",
+        "icon": "bi-file-break-fill",
+        "path": "/page4"
+      },
+      {
+        "title": "Page5",
+        "icon": "bi-file-break-fill",
+        "path": "/page5"
+      }
+    ]
+  },
+
+  {
+    "title": "Software2",
+    "icon": "bi-geer-fill",
+    "items": [
+      {
+        "title": "Page1",
+        "icon": "bi-file-break-fill",
+        "path": "/page1"
+      },
+      {
+        "title": "Page2",
+        "icon": "bi-file-break-fill",
+        "path": "/page2"
+      },
+      {
+        "title": "Page3",
+        "icon": "bi-file-break-fill",
+        "path": "/page3"
+      },
+      {
+        "title": "Page4",
+        "icon": "bi-file-break-fill",
+        "path": "/page4"
+      },
+      {
+        "title": "Page5",
+        "icon": "bi-file-break-fill",
+        "path": "/page5"
+      }
+    ]
+  },
+  
+  {
+    "title": "Software3",
+    "icon": "bi-geer-fill",
+    "items": [
+      {
+        "title": "Page1",
+        "icon": "bi-file-break-fill",
+        "path": "/page1"
+      },
+      {
+        "title": "Page2",
+        "icon": "bi-file-break-fill",
+        "path": "/page2"
+      },
+      {
+        "title": "Page3",
+        "icon": "bi-file-break-fill",
+        "path": "/page3"
+      },
+      {
+        "title": "Page4",
+        "icon": "bi-file-break-fill",
+        "path": "/page4"
+      },
+      {
+        "title": "Page5",
+        "icon": "bi-file-break-fill",
+        "path": "/page5"
+      }
+    ]
+  },
+  {
+    "title": "Software4",
+    "icon": "bi-geer-fill"
+  }
+]
