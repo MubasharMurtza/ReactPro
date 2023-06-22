@@ -12,7 +12,7 @@ const dataArray = [
         subArray:[
             {
                 path: "/",
-                name: "Software12",
+                name: "Software123456",
                 icon:<FaSign />,
             },
             {
