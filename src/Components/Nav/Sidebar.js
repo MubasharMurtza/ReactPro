@@ -39,7 +39,7 @@ const dataArray = [
       },
       {
         path: "/",
-        name: "Software5",
+        name: "Software51234",
         icon:<FaSign />
       }
 ]
