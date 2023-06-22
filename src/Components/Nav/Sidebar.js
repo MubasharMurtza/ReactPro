@@ -7,7 +7,7 @@ function Sidebar() {
 const dataArray = [
     {
         path: "/",
-        name: "Software1",
+        name: "Software1123",
         icon:<FaSign />,
         subArray:[
             {
