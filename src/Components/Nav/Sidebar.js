@@ -8,6 +8,7 @@ const dataArray = [
     {
         path: "/",
         name: "Software1",
+        value:"abc",
         icon:<FaSign />,
         subArray:[
             {
