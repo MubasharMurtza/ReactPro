@@ -8,6 +8,7 @@
 }
 .bar{
     width: 50px;
+    cursor: pointer;
 }
 .logo{
     width: 50px;
@@ -17,15 +18,19 @@
     text-align: right;
 }
 .body{
-    width: 190px;
+    width: 160px;
     background-color: black;
     height: 400px;
 }
 .dt{
     padding: 8px;
+    display: flex;
 }
 .dt:hover{
     cursor: pointer;
     color: #fff;
     background-color: #2c2c2c;
+}
+.dtName{
+    display: flex;
 }

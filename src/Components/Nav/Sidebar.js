@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Sidebar.css';
 import nflogo from './Pics/nflogo.png';
 import { FaBars, FaSign } from "react-icons/fa";
 
 function Sidebar() {
+  const [menubarSize, setMenubarSize] = useState(false)
+
 const dataArray = [
     {
         path: "/",
@@ -40,7 +42,7 @@ const dataArray = [
       },
       {
         path: "/",
-        name: "Software51234",
+        name: "Software5",
         icon:<FaSign />
       }
 ]
@@ -48,15 +50,15 @@ const dataArray = [
   return (
     <>
         <div className='header'>
-                <span><FaBars className='bar' /></span>
+                <span><FaBars className='bar' onClick={() => setMenubarSize(!menubarSize)} /></span>
                 <span><img className='logo' src={nflogo} alt="Logo" /></span>
         </div>
-        <div className='body'>
+        <div className='body' style={{ width: menubarSize ? "50px" : "160px" }} >
             {dataArray.map((data, index) => (
                 <div key={index} className='dt'>
-                    <div className='dtname'>
-                        <span style={{marginRight:"10px"}}>{data.icon}</span>
-                        <span>{data.name}</span>
+                    <div className='dtName'>
+                        <span style={{marginRight:"15px"}}>{data.icon}</span>
+                        <span style={{display:menubarSize ? "none" : "block", width:"120px"}}>{data.name}</span>
                     </div>
                 </div>
             ))}
