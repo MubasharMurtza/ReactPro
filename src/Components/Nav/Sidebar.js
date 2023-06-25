@@ -15,12 +15,12 @@ const dataArray = [
         subArray:[
             {
                 path: "/",
-                name: "Software123456",
+                name: "Value1",
                 icon:<FaSign />,
             },
             {
                 path: "/",
-                name: "Software1",
+                name: "Value2",
                 icon:<FaSign />,
             }
         ]
@@ -57,6 +57,10 @@ const dataArray = [
             {dataArray.map((data, index) => (
                 <div key={index} className='dt'>
                     <div className='dtName'>
+                        <span style={{marginRight:"15px"}}>{data.icon}</span>
+                        <span style={{display:menubarSize ? "none" : "block", width:"120px"}}>{data.name}</span>
+                    </div>
+                    <div>
                         <span style={{marginRight:"15px"}}>{data.icon}</span>
                         <span style={{display:menubarSize ? "none" : "block", width:"120px"}}>{data.name}</span>
                     </div>
