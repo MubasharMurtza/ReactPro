@@ -1,7 +1,6 @@
 import React from "react";
-import NavbarLink from "./Components/Navbar/NavbarLink";
+import NavbarLink from "./Components/Nav/NavbarLink";
 import "./index.css";
-import SidebarMenu from "./Components/Navbar/SidebarMenu/SidebarMenu";
 import Sidebar from "./Components/Nav/Sidebar";
 
 function App() {
