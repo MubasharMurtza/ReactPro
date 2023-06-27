@@ -5,43 +5,29 @@ import { FaBars, FaSign, FaSearch, FaHome } from "react-icons/fa";
 import {AnimatePresence, motion} from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 
-
 const dataArray = [
   {
-      path: "/",
+      path: "/page1",
       name: "Software1",
-      value:"abc",
       icon:<FaHome />,
-      subArray:[
-          {
-              path: "/",
-              name: "Value1",
-              icon:<FaSign />,
-          },
-          {
-              path: "/",
-              name: "Value2",
-              icon:<FaSign />,
-          }
-      ]
     },
     {
-      path: "/",
+      path: "/page2",
       name: "Software2",
       icon:<FaSign />
     },
     {
-      path: "/",
+      path: "/page3",
       name: "Software3",
       icon:<FaSign />
     },
     {
-      path: "/",
+      path: "/page4",
       name: "Software4",
       icon:<FaSign />
     },
     {
-      path: "/",
+      path: "/page5",
       name: "Software5",
       icon:<FaSign />
     }
@@ -55,7 +41,10 @@ function Sidebar({children}) {
     hidden:{
       width:0,
       padding:0,
-      opacity:0
+      opacity:0,
+      transition:{
+        duration:0.2,
+      }
     },
     show:{
       width:"160px",
@@ -66,13 +55,29 @@ function Sidebar({children}) {
       }
     }
   }
+  const showAnimation = {
+    hidden:{
+      width:0,
+      opacity:0,
+      transition:{
+        duration:0.2,
+      }
+    },
+    show:{
+      width:'Audio',
+      opacity:1,
+      transition:{
+        duration:0.2,
+      }
+    }
+  }
 
   return (
     <>
-        <div>
+        <div className='main-container'>
           <motion.div animate={{width: isShow ? '200px' : '40px'}} className='header'>
             <div className='top'>
-              <span>{isShow && <img src={nflogo} alt="Logo" className='logo' />}</span>
+              <motion.span initial="hidden" animate="show" exit="hidden">{isShow && <img src={nflogo} alt="Logo" className='logo' />}</motion.span>
               <span><FaBars className='bar' onClick={toggle}/></span>
             </div>
             <div className='search'>
@@ -82,17 +87,17 @@ function Sidebar({children}) {
                 </AnimatePresence>
             </div>
               <section className='arr'>
-                {dataArray.map((data, index) => (
-                  <NavLink to={Array.path} key={Array.name} className='link'>
-                    <div className='icon'>{data.icon}</div>
+                {dataArray.map((dt) => (
+                  <NavLink activClassName="activ" to={dt.path} key={dt.name} className='link'>
+                    <div className='icon'>{dt.icon}</div>
                     <AnimatePresence>
-                      {isShow && <motion.div className='title'>{data.name}</motion.div>}
+                      {isShow && <motion.div variants={showAnimation} initial="hidden" animate="show" exit="hidden" className='title'>{dt.name}</motion.div>}
                     </AnimatePresence>
                   </NavLink>
                 ))}
               </section>
           </motion.div>
-          <main>{children}</main>
+          <main>{children} <h2>What is your Name?</h2></main>
         </div>
     </>
 )
