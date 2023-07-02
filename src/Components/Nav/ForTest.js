@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 function ForTest() {
   return (
     <div>
-        <NavLink to="/page1">home</NavLink>
+            <NavLink to="/page1">home</NavLink>
     </div>
     )
 }

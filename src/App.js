@@ -1,11 +1,14 @@
 import React from "react";
 import "./index.css";
-import Sidebar from "./Components/Nav/Sidebar";
+import ForTest from "./Components/Nav/ForTest";
+import NavbarLink from "./Components/Nav/NavbarLink";
 
 function App() {
   return (
     <>
-      <Sidebar />
+      <div style={{display:"flex"}}>
+        <NavbarLink />
+      </div>
     </>
   );
 }

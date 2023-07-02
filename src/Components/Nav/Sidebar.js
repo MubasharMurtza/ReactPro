@@ -33,7 +33,7 @@ const dataArray = [
     }
 ]
 
-function Sidebar({children}) {
+function Sidebar() {
   const [isShow, setisShow] = useState(false)
   const toggle = () => {setisShow(!isShow)}
 
@@ -97,7 +97,6 @@ function Sidebar({children}) {
                 ))}
               </section>
           </motion.div>
-          <main>{children} <h2>What is your Name?</h2></main>
         </div>
     </>
 )
