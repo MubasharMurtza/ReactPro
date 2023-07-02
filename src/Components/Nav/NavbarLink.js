@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Party from '../PartyF/Party';
 import PParty from '../PartyFolder/PParty';
 import Customer from '../Customer';
@@ -9,8 +9,8 @@ import Page2 from './Pages/Page2';
 import Page3 from './Pages/Page3';
 import Page4 from './Pages/Page4';
 import Page5 from './Pages/Page5';
-import ForTest from './ForTest';
 import Sidebar from './Sidebar';
+import Topbar from './Topbar';
 
 function NavbarLink() {
   return (
@@ -18,7 +18,7 @@ function NavbarLink() {
       <BrowserRouter>
         <Sidebar />
         <Routes>
-          <Route path='/Home' element={<Home />} exact />
+          <Route path='/Home' n element={<Home />} exact />
           <Route path='/Party' element={<Party />} exact />
           <Route path='/Customer' element={<Customer />} exact />
           <Route path='/Partyp' element={<PParty />} exact />
