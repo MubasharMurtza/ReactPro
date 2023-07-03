@@ -6,9 +6,7 @@ import Topbar from "./Components/Nav/Topbar";
 function App() {
   return (
     <>
-      <div style={{display:"flex"}}>
         <NavbarLink />
-      </div>
     </>
   );
 }

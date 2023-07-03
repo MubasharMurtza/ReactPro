@@ -60,3 +60,21 @@ a{
 link_text{
     white-space: nowrap;
 }
+.topMain{
+    display: flex;
+    background-color:rgb(23, 25, 94);
+    width: 100%;
+    height: 40px;
+}
+.topClient{
+    display: flex;
+    margin-left: 70px;
+}
+.topLink{
+    display: flex;
+    color: white;
+    gap: 5px;
+    padding: 10px 10px;
+    font-size: 15px;
+}
+

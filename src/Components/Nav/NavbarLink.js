@@ -16,21 +16,23 @@ function NavbarLink() {
   return (
     <>
       <BrowserRouter>
-        <Sidebar />
-        <Routes>
-          <Route path='/Home' n element={<Home />} exact />
-          <Route path='/Party' element={<Party />} exact />
-          <Route path='/Customer' element={<Customer />} exact />
-          <Route path='/Partyp' element={<PParty />} exact />
-            
+        <div>
+            <Sidebar />
+          <Routes>
+            <Route path='/Home' n element={<Home />} exact />
+            <Route path='/Party' element={<Party />} exact />
+            <Route path='/Customer' element={<Customer />} exact />
+            <Route path='/Partyp' element={<PParty />} exact />
+              
 
             
-          <Route path='/page1' element={<Page1 />} exact />
-          <Route path='/page2' element={<Page2 />} exact />
-          <Route path="/page3" element={<Page3 />} exact />
-          <Route path="/page4" element={<Page4 />} exact />
-          <Route path="/page5" element={<Page5 />} exact />
-        </Routes>
+            <Route path='/page1' element={<Page1 />} exact />
+            <Route path='/page2' element={<Page2 />} exact />
+            <Route path="/page3" element={<Page3 />} exact />
+            <Route path="/page4" element={<Page4 />} exact />
+            <Route path="/page5" element={<Page5 />} exact />
+          </Routes>
+        </div>
       </BrowserRouter>
     </>
   )

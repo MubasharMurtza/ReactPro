@@ -1,21 +1,47 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import {Navbar,Nav} from 'react-bootstrap'
+import React from "react";
+import "./Sidebar.css";
+import { FaBars, FaSign, FaSearch, FaHome } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
-export default function Topbar() {
+const dataArray = [
+  {
+    path: "/Home",
+    name: "Home",
+    icon: <FaHome />,
+  },
+  {
+    path: "/party",
+    name: "Party",
+    icon: <FaSign />,
+  },
+  {
+    path: "/partyM",
+    name: "PartyM",
+    icon: <FaSign />,
+  },
+  {
+    path: "/gateparty",
+    name: "GateParty",
+    icon: <FaSign />,
+  },
+];
+
+function Topbar() {
   return (
-    <div>
-      <Navbar bg="success" expand="lg" style={{ marginLeft:"304px", height:"50px" }}>
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse id='basic-navbar-nav'>
-              <Nav style={{ marginLeft:"30px" }}>
-                  <NavLink style={{ fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/">Home</NavLink>
-                  <NavLink style={{ marginLeft:"20px", fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/party">Party</NavLink>
-                  <NavLink style={{ marginLeft:"20px", fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/partyM">PartyM</NavLink>
-                  <NavLink style={{ marginLeft:"20px", fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/gateparty">GateParty</NavLink>
-              </Nav>       
-          </Navbar.Collapse>
-      </Navbar>
-    </div>
-  )
+    <>
+      <div className="topMain">
+        <div className="topClient">
+            {dataArray.map((dt) => (
+            <NavLink to={dt.path} key={dt.name}>
+                <div className="topLink">
+                {dt.name}
+                </div>
+            </NavLink>
+            ))}
+        </div>
+      </div>
+    </>
+  );
 }
+
+export default Topbar;
