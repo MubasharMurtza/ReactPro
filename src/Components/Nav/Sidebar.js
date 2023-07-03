@@ -1,16 +1,28 @@
-import React, { useState } from 'react'
+import React, { Children, useState } from 'react'
 import './Sidebar.css';
 import nflogo from './Pics/nflogo.png';
 import { FaBars, FaSign, FaSearch, FaHome } from "react-icons/fa";
 import {AnimatePresence, motion} from 'framer-motion';
 import { NavLink } from 'react-router-dom';
-import Topbar from './Topbar';
 
 const dataArray = [
   {
       path: "/page1",
       name: "Software1",
       icon:<FaHome />,
+      subArray:[
+        {
+          path: "/page1",
+          name: "Software1",
+          icon:<FaHome />,
+        },
+        {
+          path: "/page2",
+          name: "Software2",
+          icon:<FaHome />,
+        },
+        
+      ]
     },
     {
       path: "/page2",
@@ -34,7 +46,7 @@ const dataArray = [
     }
 ]
 
-function Sidebar() {
+function Sidebar({Children}) {
   const [isShow, setisShow] = useState(false)
   const toggle = () => {setisShow(!isShow)}
 
@@ -76,7 +88,7 @@ function Sidebar() {
   return (
     <>
         <div className='main-container'>
-          <motion.div animate={{width: isShow ? '200px' : '40px'}} className='header'>
+          <motion.div animate={{width: isShow ? '200px' : '40px', transition:{duration:0.5,type:"spring",damping:11}}} className='header'>
             <div className='top'>
               <motion.span initial="hidden" animate="show" exit="hidden">{isShow && <img src={nflogo} alt="Logo" className='logo' />}</motion.span>
               <span><FaBars className='bar' onClick={toggle}/></span>
@@ -98,7 +110,7 @@ function Sidebar() {
                 ))}
               </section>
           </motion.div>
-          <Topbar />
+          <main>{Children}</main>
         </div>
     </>
 )

@@ -16,10 +16,11 @@ function NavbarLink() {
   return (
     <>
       <BrowserRouter>
-        <div>
-            <Sidebar />
+        <Topbar/>
+        <div style={{display:"flex"}}>
+          <Sidebar />
           <Routes>
-            <Route path='/Home' n element={<Home />} exact />
+            <Route path='/Home'  element={<Home />} exact />
             <Route path='/Party' element={<Party />} exact />
             <Route path='/Customer' element={<Customer />} exact />
             <Route path='/Partyp' element={<PParty />} exact />
