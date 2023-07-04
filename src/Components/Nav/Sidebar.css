@@ -40,6 +40,18 @@ main{
 a{
     text-decoration: none;
 }
+.menu{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    gap: 15px;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+.menuItem{
+    display: flex;
+    gap: 10px;
+}
 .link{
     display: flex;
     color: white;
@@ -76,5 +88,9 @@ link_text{
     gap: 5px;
     padding: 10px 10px;
     font-size: 15px;
+}
+.menuContainer .link{
+    padding-left: 20px;
+    border-bottom: #fff 0.5px solid;
 }
 
