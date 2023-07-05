@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Sidebar.css";
 import nflogo from "./Pics/nflogo.png";
 import { FaBars, FaSign, FaSearch, FaHome } from "react-icons/fa";
@@ -21,28 +21,76 @@ const dataArray = [
         path: "/page2",
         name: "Page2",
         icon: <FaHome />,
-      },
-    ],
+      }
+    ]
   },
   {
     path: "/page2",
     name: "Software2",
     icon: <FaSign />,
+    subArray: [
+      {
+        path: "/page1",
+        name: "Page1",
+        icon: <FaHome />,
+      },
+      {
+        path: "/page2",
+        name: "Page2",
+        icon: <FaHome />,
+      }
+    ]
   },
   {
     path: "/page3",
     name: "Software3",
     icon: <FaSign />,
+    subArray: [
+      {
+        path: "/page1",
+        name: "Page1",
+        icon: <FaHome />,
+      },
+      {
+        path: "/page2",
+        name: "Page2",
+        icon: <FaHome />,
+      }
+    ]
   },
   {
     path: "/page4",
     name: "Software4",
     icon: <FaSign />,
+    subArray: [
+      {
+        path: "/page1",
+        name: "Page1",
+        icon: <FaHome />,
+      },
+      {
+        path: "/page2",
+        name: "Page2",
+        icon: <FaHome />,
+      }
+    ]
   },
   {
     path: "/page5",
     name: "Software5",
     icon: <FaSign />,
+    subArray: [
+      {
+        path: "/page1",
+        name: "Page1",
+        icon: <FaHome />,
+      },
+      {
+        path: "/page2",
+        name: "Page2",
+        icon: <FaHome />,
+      }
+    ]
   },
 ];
 
@@ -124,7 +172,7 @@ function Sidebar({ Children }) {
           <section className="arr">
             {dataArray.map((dt, index) => {
               if (dt.subArray) {
-                return <SubArr showAnimation={showAnimation} isShow={isShow} dt={dt} key={dt.name} />;
+                return <SubArr showAnimation={showAnimation} isShow={isShow} dt={dt} key={dt.name} setisShow={setisShow} />;
               }
               return (
                 <NavLink

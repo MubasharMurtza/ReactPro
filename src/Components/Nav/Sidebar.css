@@ -8,6 +8,7 @@ main{
     background-color:rgb(23, 25, 94);
     color: white;
     height: 100vh;
+    overflow-y: auto;
 }
 .top{
     display: flex;
@@ -48,6 +49,10 @@ a{
     padding: 5px 10px;
     font-size: 18px;
 }
+.menu:hover{
+    cursor: pointer;
+    background: rgb(45, 51, 89);
+}
 .menuItem{
     display: flex;
     gap: 10px;
@@ -65,7 +70,6 @@ a{
     background: rgb(45, 51, 89);
 }
 .active{
-    border-right: 3px solid white;
     transition: 0.2s cubic-bezier(0.6, -0.28, 0.500, 0.045);
     background: rgb(45, 51, 89);
 }
