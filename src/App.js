@@ -7,8 +7,8 @@ import BasicForm from "./Components/BasicForm";
 function App() {
   return (
     <>
-      {/* <NavbarLink /> */}
-      <BasicForm />
+      <NavbarLink />
+      {/* <BasicForm /> */}
     </>
   );
 }

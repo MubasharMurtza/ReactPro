@@ -9,12 +9,12 @@ import SubArr from "./SubArr";
 const dataArray = [
   {
     path: "/page1",
-    name: "Software1",
+    name: "Scale Software",
     icon: <FaHome />,
     subArray: [
       {
         path: "/page1",
-        name: "Page1",
+        name: "Party",
         icon: <FaHome />,
       },
       {
