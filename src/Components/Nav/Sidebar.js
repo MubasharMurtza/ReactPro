@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import nflogo from "./Pics/nflogo.png";
 import { FaBars, FaSign, FaSearch, FaHome } from "react-icons/fa";
@@ -13,7 +13,7 @@ const dataArray = [
     icon: <FaHome />,
     subArray: [
       {
-        path: "/page1",
+        path: "/scaleParty",
         name: "Party",
         icon: <FaHome />,
       },
