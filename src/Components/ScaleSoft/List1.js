@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import SearchListBar from './SearchListBar';
 
-const List1 = ({initialData}) => {
+const List1 = () => {
+
+  const initialData = [
+    {PartyID:1,PartyName:"Mubashar Murtza"},
+    {PartyID:2,PartyName:"Nf Traders"},
+    {PartyID:3,PartyName:"Yousaf Traders"},
+    {PartyID:4,PartyName:"Haris Traders"},
+  ]
  
   const [filteredData, setFilteredData] = useState(initialData);
 

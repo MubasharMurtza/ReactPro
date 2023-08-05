@@ -1,42 +1,42 @@
-import React, { useState } from 'react';
-import Table from 'react-bootstrap/esm/Table';
+import React, { useState } from "react";
 
-const SearchBar = ({allData}) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredData, setFilteredData] = useState([]);
+function SearchBar({list}) {
+  
+  const [searchValue, setSearchValue] = useState("");
 
-  const handleSearch = (query) => {
-    const filtered = allData.filter((item) =>
-      item.PartyName.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredData(filtered);
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setSearchValue(value);
   };
-
-  return (
-    <div>
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={(e) => {
-          setSearchQuery(e.target.value);
-          handleSearch(e.target.value);
-        }}
-        placeholder="Search..."
-      />
-      <Table>
-        <tr>
-          <th>PartyID</th>
-          <th>PartyName</th>
-        </tr>
-        {filteredData.map((pl, index) => (
-          <tr key={index}>
-              <td>{pl.PartyID}</td>    
-              <td>{pl.PartyName}</td>    
-          </tr>
-          ))}
-      </Table>
-    </div>
+  const filteredData = list.filter((lst) =>
+    lst.PartyName.toLowerCase().includes(searchValue.toLowerCase())
   );
-};
+  
+  return (
+    <>
+      <div>
+        <input
+          type="text"
+          placeholder="Search..."
+          onChange={handleChange}
+          value={searchValue}
+        />
+
+        <table>
+          <tr>
+            <td>PartyID</td>
+            <td>PartyName</td>
+          </tr>
+          {filteredData.map((p, index) => (
+            <tr key={index}>
+              <td>{p.PartyID}</td>
+              <td>{p.PartyName}</td>
+            </tr>
+          ))}
+        </table>
+      </div>
+    </>
+  );
+}
 
 export default SearchBar;

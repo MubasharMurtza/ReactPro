@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const SearchListBar = ({ data, onSearch }) => {
+  
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = (event) => {
@@ -19,7 +20,7 @@ const SearchListBar = ({ data, onSearch }) => {
       />
       <ul>
         {data.map((item) => (
-          <li key={item.PartyID}>{item.PartyName}</li>
+          <li key={item.PartyID}>{item.PartyID}-{item.PartyName}</li>
         ))}
       </ul>
     </div>
