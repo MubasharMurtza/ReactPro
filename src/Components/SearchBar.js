@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { Button, Table } from "react-bootstrap";
+import EditPartyModal from "./ScaleSoft/Parties/EditPartyModal";
 
-function SearchBar({list}) {
-  
+function SearchBar({ list, column }) {
+  const [EditModal, setEditModal] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
   const handleChange = (e) => {
@@ -11,30 +13,41 @@ function SearchBar({list}) {
   const filteredData = list.filter((lst) =>
     lst.PartyName.toLowerCase().includes(searchValue.toLowerCase())
   );
-  
+
   return (
     <>
-      <div>
-        <input
-          type="text"
-          placeholder="Search..."
-          onChange={handleChange}
-          value={searchValue}
-        />
-
-        <table>
-          <tr>
-            <td>PartyID</td>
-            <td>PartyName</td>
+      <input
+        type="text"
+        placeholder="Search..."
+        onChange={handleChange}
+        value={searchValue}
+      />
+      <Table className="table" table striped bordered hover size="sm">
+        <thead>
+        <tr>
+          {column.map((c, index) => (
+            <th key={index}>{c}</th>
+          ))}
+          <th>Edit</th>
+          <th>Delete</th>
           </tr>
+          </thead>
+        <tbody>
           {filteredData.map((p, index) => (
             <tr key={index}>
               <td>{p.PartyID}</td>
               <td>{p.PartyName}</td>
+              <td>
+                <Button variant="info" onClick={() => setEditModal(true)}>Edit</Button>
+                <EditPartyModal show={EditModal} onHide={() => setEditModal(false)} PID={(e) => (p.PartyID)} pName={(e) => (p.PartyName)} />
+              </td>
+              <td>
+                <Button variant="danger">Delete</Button>
+              </td>
             </tr>
           ))}
-        </table>
-      </div>
+        </tbody>
+      </Table>
     </>
   );
 }

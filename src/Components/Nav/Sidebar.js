@@ -30,7 +30,7 @@ const dataArray = [
     icon: <FaSign />,
     subArray: [
       {
-        path: "/page1",
+        path: "/Customer",
         name: "Page1",
         icon: <FaHome />,
       },
