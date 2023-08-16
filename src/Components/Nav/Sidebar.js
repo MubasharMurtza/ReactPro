@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Sidebar.css";
-import nflogo from "./Pics/nflogo.png";
 import { FaBars, FaSign, FaSearch, FaHome } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavLink } from "react-router-dom";

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Button, Table } from "react-bootstrap";
-import EditPartyModal from "./ScaleSoft/Parties/EditPartyModal";
 
 function SearchBar({ list, column }) {
-  const [EditModal, setEditModal] = useState(false);
+  // const [EditModal, setEditModal] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
   const handleChange = (e) => {
@@ -38,8 +37,7 @@ function SearchBar({ list, column }) {
               <td>{p.PartyID}</td>
               <td>{p.PartyName}</td>
               <td>
-                <Button variant="info" onClick={() => setEditModal(true)}>Edit</Button>
-                <EditPartyModal show={EditModal} onHide={() => setEditModal(false)} PID={(e) => (p.PartyID)} pName={(e) => (p.PartyName)} />
+                <Button variant="info" onClick="">Edit</Button>
               </td>
               <td>
                 <Button variant="danger">Delete</Button>

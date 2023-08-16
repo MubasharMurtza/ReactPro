@@ -9,7 +9,6 @@ import Page2 from "./Pages/Page2";
 import Page3 from "./Pages/Page3";
 import Page4 from "./Pages/Page4";
 import Page5 from "./Pages/Page5";
-import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
 import ScaleParty from "../ScaleSoft/ScaleParty";
 import AddParty from "../ScaleSoft/Parties/AddParty";
