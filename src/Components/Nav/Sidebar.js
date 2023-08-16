@@ -134,7 +134,7 @@ function Sidebar({ Children, toggle, isShow, setisShow }) {
   return (
     <>
          
-      <div className="main-container fixed-top">
+      <div className="main-container  fixed-top">
         <motion.div
           animate={{
             width: isShow ? "200px" : "40px",
@@ -144,7 +144,7 @@ function Sidebar({ Children, toggle, isShow, setisShow }) {
         >
           <div className="top">
             <motion.span initial="hidden" animate="show" exit="hidden">
-              {isShow && <img src={nflogo} alt="Logo" className="logo" />}
+             
             </motion.span>
             <span>
               <FaBars className="bar" onClick={toggle} />

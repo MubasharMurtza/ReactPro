@@ -2,6 +2,7 @@ import React from "react";
 import "./Sidebar.css";
 import { FaBars, FaSign, FaSearch, FaHome } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import nflogo from "./Pics/nflogo.png";
 
 const dataArray = [
   {
@@ -45,21 +46,20 @@ function Topbar() {
                 </div>
             </NavLink>
             ))} */}
-       
-       <ul class="nav fixed-top  bg-dark" data-bs-theme="dark ">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-  </li>
-</ul>
+     
+       <nav className="navbar bg-black  my-1   fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand my-0 text-light mx-2"  href="#">
+    <img src={nflogo} alt="Logo" className="logo" />
+      Project Name
+    </a>
+    
+    
+  </div>
+</nav>
+
+
+
       
     </>
   );

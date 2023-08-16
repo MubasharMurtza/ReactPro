@@ -280,18 +280,22 @@ export default function ScaleParty() {
 
   return (
     <>
-    <div className="bodyPage" >
+    
+    <div className="bodyPage  border  border-dark " >
+    
+        
     <div>
     
-        <Link to="/addParty" className="btn btn-primary mx-2 my-5"> Add New Party</Link>
+        <Link to="/addParty" className="btn btn-primary my-3 mx-3 "> Add New Party</Link>
         <Button onClick={() => setShowModal(true)}>Add New Party</Button>
-        <ScalePartyModal show={showModal} onHide={() => setShowModal(false)} />
+        {/* <ScalePartyModal show={showModal} onHide={() => setShowModal(false)} /> */}
 
       </div>
-      <div>
+      
         <SearchBar list={data} column={column}  />
+      
       </div>
-      </div>
+      
     </>
   )
 }
