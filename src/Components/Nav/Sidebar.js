@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
-import { FaBars, FaSign, FaSearch, FaHome } from "react-icons/fa";
+import { FaSign, FaSearch, FaHome } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import SubArr from "./SubArr";
@@ -93,7 +93,7 @@ const dataArray = [
   },
 ];
 
-function Sidebar({ Children, toggle, isShow, setisShow }) {
+function Sidebar({ Children, isShow, setisShow }) {
   
   const inputAnimation = {
     hidden: {
@@ -141,14 +141,6 @@ function Sidebar({ Children, toggle, isShow, setisShow }) {
           }}
           className="header"
         >
-          <div className="top">
-            <motion.span initial="hidden" animate="show" exit="hidden">
-             
-            </motion.span>
-            <span>
-              <FaBars className="bar" onClick={toggle} />
-            </span>
-          </div>
           <div className="search">
             <div className="search_icon">
               <FaSearch />

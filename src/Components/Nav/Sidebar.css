@@ -13,19 +13,17 @@ main{
     height: 100vh;
     overflow-y: auto;
 }
-.top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between  ;
-    padding: 15px 10px;
-}
+
 .logo{
     width: 34px;
     line-height: 0;
     position: 'fixed';
 }
 .bar{
-    height: 78.8;
+    /* height: 78.8; */
+    color: #ffffff;
+    cursor: pointer;
+    width: 100px;
 }
 .search{
     display: flex;

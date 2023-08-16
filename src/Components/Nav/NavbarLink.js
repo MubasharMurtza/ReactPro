@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Party from "../PartyF/Party";
 import PParty from "../PartyFolder/PParty";
 import Customer from "../Customer";
@@ -12,16 +12,10 @@ import Page5 from "./Pages/Page5";
 import Topbar from "./Topbar";
 import ScaleParty from "../ScaleSoft/ScaleParty";
 import AddParty from "../ScaleSoft/Parties/AddParty";
-import FunctionF from "../FunctionF";
 
 function NavbarLink() {
   return (
     <>
-      <BrowserRouter>
-        <Topbar />
-        <div style={{ display: "flex" }}>
-
-        <FunctionF />
           <Routes>
             <Route path="/Home" element={<Home />} exact />
             <Route path="/Party" element={<Party />} exact />
@@ -36,8 +30,6 @@ function NavbarLink() {
             <Route path="/page4" element={<Page4 />} exact />
             <Route path="/page5" element={<Page5 />} exact />
           </Routes>
-        </div>
-      </BrowserRouter>
     </>
   );
 }

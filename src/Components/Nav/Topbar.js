@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
-import { FaSign, FaHome } from "react-icons/fa";
+import { FaSign, FaHome, FaBars } from "react-icons/fa";
 import nflogo from "./Pics/nflogo.png";
 import { Link } from "react-router-dom";
 
@@ -32,21 +32,22 @@ const dataArray = [
   },
 ];
 
-function Topbar() {
+function Topbar({toggle}) {
+  
   return (
     <>
-      <nav className="navbar bg-black  my-1   fixed-top">
+      <span className="bar" onClick={toggle}><FaBars style={{width:"50px", color:"black"}} /></span>
+      <nav className="navbar bg-black  my-1 fixed-top">
         <div className="container-fluid">
           <img src={nflogo} alt="Logo" className="logo" />
-          
           {dataArray.map((dt) => (
             <Link to={dt.path} key={dt.name}>
-              <div className="topLink">{dt.name}</div>
+              <div className="topLink">{dt.icon}{dt.name}</div>
             </Link>
           ))}
         </div>
       </nav>
-    </>
+      </>
   );
 }
 

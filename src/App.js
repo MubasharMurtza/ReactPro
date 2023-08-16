@@ -1,12 +1,16 @@
 import React from "react";
 import "./index.css";
-import NavbarLink from "./Components/Nav/NavbarLink";
+import FunctionF from "./Components/FunctionF";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <NavbarLink />
-      {/* <BasicForm /> */}
+      <BrowserRouter>
+        {/* <NavbarLink /> */}
+        {/* <BasicForm /> */}
+        <FunctionF />
+      </BrowserRouter>
     </>
   );
 }
