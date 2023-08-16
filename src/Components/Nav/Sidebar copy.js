@@ -94,8 +94,12 @@ const dataArray = [
   },
 ];
 
-function Sidebar({ Children, toggle, isShow, setisShow }) {
-  
+function Sidebar({ Children }) {
+  const [isShow, setisShow] = useState(false);
+  const toggle = () => {
+    setisShow(!isShow);
+  };
+
   const inputAnimation = {
     hidden: {
       width: 0,
@@ -133,8 +137,7 @@ function Sidebar({ Children, toggle, isShow, setisShow }) {
 
   return (
     <>
-         
-      <div className="main-container fixed-top">
+      <div className="main-container">
         <motion.div
           animate={{
             width: isShow ? "200px" : "40px",
@@ -198,9 +201,7 @@ function Sidebar({ Children, toggle, isShow, setisShow }) {
           </section>
         </motion.div>
         <main>{Children}</main>
-        
       </div>
-      
     </>
   );
 }
