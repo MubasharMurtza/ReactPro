@@ -1,11 +1,14 @@
+
 .main-container{
-    display: flex;
+    display: flex; 
+    margin-top: 30px;
 }
 main{
     padding: 10px;
 }
+
 .header{
-    background-color:rgb(23, 25, 94);
+    background-color:rgb(12, 5, 31);
     color: white;
     height: 100vh;
     overflow-y: auto;
@@ -22,7 +25,7 @@ main{
     position: 'fixed';
 }
 .bar{
-    height: 58.8;
+    height: 78.8;
 }
 .search{
     display: flex;
@@ -35,7 +38,7 @@ main{
     border: none;
     margin-left: 10px;
     border-radius: 5px;
-    background: rgb(238,238,238);
+    background: rgb(151, 178, 189);
     height: 24px;
 }
 a{
@@ -59,7 +62,7 @@ a{
 }
 .link{
     display: flex;
-    color: white;
+    color: rgb(255, 255, 255);
     gap: 15px;
     padding: 5px 10px;
     font-size: 18px;
@@ -74,27 +77,29 @@ a{
     background: rgb(45, 51, 89);
 }
 link_text{
-    white-space: nowrap;
+    white-space:nowrap;
 }
-.topMain{
-    display: flex;
-    background-color:rgb(23, 25, 94);
-    width: 100%;
-    height: 40px;
-}
+
 .topClient{
     display: flex;
     margin-left: 500px;
 }
 .topLink{
     display: flex;
-    color: white;
+    color: rgb(247, 242, 242);
     gap: 5px;
     padding: 10px 10px;
     font-size: 15px;
 }
 .menuContainer .link{
     padding-left: 20px;
-    border-bottom: #fff 0.5px solid;
+    border-bottom: #ffffff 0.5px solid;
 }
+.bodyPage{
+       
+   margin-left: 240px;
+    width: 90%;
+
+}
+
 
