@@ -36,9 +36,10 @@ function Topbar({toggle}) {
   
   return (
     <>
-      <span className="bar" onClick={toggle}><FaBars style={{width:"50px", color:"black"}} /></span>
-      <nav className="navbar bg-black  my-1 fixed-top">
-        <div className="container-fluid">
+     
+      <nav className="navbar bg-black  fixed-top">
+        <div className="topBar">
+        <span className="bar" onClick={toggle}><FaBars  /></span>
           <img src={nflogo} alt="Logo" className="logo" />
           {dataArray.map((dt) => (
             <Link to={dt.path} key={dt.name}>
