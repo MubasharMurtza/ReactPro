@@ -24,7 +24,6 @@ export default function ScaleParty() {
       <div className="bodyPage  border  border-dark ">
         <div>
           <Link to="/addParty" className="btn btn-primary my-3 mx-3 ">
-            {" "}
             Add New Party
           </Link>
           <Button onClick={() => setShowModal(true)}>Add New Party</Button>

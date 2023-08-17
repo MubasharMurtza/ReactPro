@@ -12,7 +12,7 @@ export default function FunctionF() {
         <>
             <Topbar toggle={toggle} />
             <Sidebar isShow={isShow} setisShow={setisShow} />
-            <NavbarLink />
+            <NavbarLink isShow={isShow} />
         </>
     );
 }
