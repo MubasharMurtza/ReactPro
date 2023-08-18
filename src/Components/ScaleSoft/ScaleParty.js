@@ -5,10 +5,11 @@ import axios from "axios";
 import SearchBar from "../SearchBar";
 import { Link } from "react-router-dom";
 import "../Nav/Sidebar.css";
+import { ButtonToolbar } from "react-bootstrap";
 
 export default function ScaleParty() {
   const [showModal, setShowModal] = useState(false);
-
+  
   const [column, setColumn] = useState([]);
   const [data, setdata] = useState([]);
 
@@ -21,17 +22,17 @@ export default function ScaleParty() {
 
   return (
     <>
-      <div className="bodyPage  border  border-dark ">
         <div>
-          <Link to="/addParty" className="btn btn-primary my-3 mx-3 ">
+          {/* <Link to="/addParty" className="btn btn-primary my-3 mx-3 ">
             Add New Party
-          </Link>
-          <Button onClick={() => setShowModal(true)}>Add New Party</Button>
+          </Link> */}
+          <Button onClick={() => setShowModal(true)} className="btn btn-primary my-3 mx-3 ">
+            Add New Party
+          </Button>
           <ScalePartyModal
             show={showModal}
             onHide={() => setShowModal(false)}
           />
-        </div>
         <SearchBar list={data} column={column} />
       </div>
     </>
