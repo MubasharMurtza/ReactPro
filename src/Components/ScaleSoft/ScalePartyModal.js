@@ -6,9 +6,6 @@ export default function ScalePartyModal({ onHide, show, maxPartyID }) {
 
   const [list, setList] = useState([])
   
-  const partyIDs = list.map(list => list.PartyID);
-  const maxPartyID = Math.max(...partyIDs);
-  console.log(maxPartyID)
   const [partyData, setPartyData] = useState({
     PartyID:1,
     PartyName:"Mubashar Murtza"

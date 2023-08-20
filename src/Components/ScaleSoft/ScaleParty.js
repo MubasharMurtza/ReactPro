@@ -32,6 +32,7 @@ export default function ScaleParty() {
           <ScalePartyModal
             show={showModal}
             onHide={() => setShowModal(false)}
+            maxPartyID={maxPartyID}
           />
           <SearchBar list={data} column={column} />
         </div>
