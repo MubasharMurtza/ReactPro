@@ -11,7 +11,8 @@ export default function ScaleParty() {
 
   const [column, setColumn] = useState([]);
   const [data, setdata] = useState([]);
-
+  const maxPartyID = Math.max(...data.map((data) => data.PartyID)) + 1;
+  
   useEffect(() => {
     axios.get("https://localhost:44327/api/scaleparty").then((res) => {
       setColumn(Object.keys(res.data[0]));
@@ -28,8 +29,6 @@ export default function ScaleParty() {
 
         <Button onClick={() => setShowModal(true)}>Add New Party</Button>
         <div>
-         
-          
           <ScalePartyModal
             show={showModal}
             onHide={() => setShowModal(false)}
@@ -38,5 +37,5 @@ export default function ScaleParty() {
         </div>
       </div>
     </>
-  )
+  );
 }
