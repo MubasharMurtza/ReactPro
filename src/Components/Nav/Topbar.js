@@ -36,7 +36,7 @@ function Topbar({toggle}) {
   
   return (
     <>
-     <nav className="navbar bg-rgb(33, 156, 64)  fixed-top">
+     <nav className="navbar   fixed-top">
         <div className="topBar">
         <span className="bar" onClick={toggle}><FaBars  /></span>
           <img src={nflogo} alt="Logo" className="logo" />

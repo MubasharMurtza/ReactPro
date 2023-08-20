@@ -1,7 +1,10 @@
 
 .main-container{
-    display: flex; 
-    margin-top: 58px;
+    
+   
+   display: flex;
+   margin-top: 0px;
+   position: fixed;
 }
 main{
     padding: 10px;
@@ -12,6 +15,7 @@ main{
     color: white;
     height: 100vh;
     overflow-y: auto;
+    
 }
 
 .logo{
@@ -107,6 +111,7 @@ link_text{
     background-color: rgba(33, 156, 64,1)
 
 }
+
 
 
 

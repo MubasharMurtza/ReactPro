@@ -21,19 +21,56 @@ export default function ScaleParty() {
 
   return (
     <>
-      <div className="bodyPage  border  border-dark ">
-        <div>
-          <Link to="/addParty" className="btn btn-primary my-3 mx-3 ">
+      
+       <div className="bodyPage">
+          <button to="/addParty" className="btn btn-info my-3 mx-3 ">
             Add New Party
-          </Link>
-          <Button onClick={() => setShowModal(true)}>Add New Party</Button>
+          </button>
+          
+          <Button  onClick={() => setShowModal(true)}>Add New Party</Button>
           <ScalePartyModal
             show={showModal}
             onHide={() => setShowModal(false)}
           />
         </div>
         <SearchBar list={data} column={column} />
-      </div>
+        <p>
+        The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 67:5:   The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 67:5:   The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 67:5:   The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 67:5:   The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 67:5:   The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 67:5:   The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 67:5:   The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+  Line 67:5:   The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot 
+provide a valid href, but still need the element to resemble a link, use a button and change it with appropriate styles. Learn more: https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md  jsx-a11y/anchor-is-valid
+
+ </p>
+       
+      
     </>
   );
 }

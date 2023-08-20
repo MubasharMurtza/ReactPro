@@ -133,7 +133,7 @@ function Sidebar({ Children, isShow, setisShow }) {
   return (
     <>
          
-      <div className="main-container  fixed-top">
+      <div className="main-container ">
         <motion.div
           animate={{
             width: isShow ? "200px" : "40px",
