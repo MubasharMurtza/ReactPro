@@ -2,14 +2,17 @@ import axios from "axios";
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 
-export default function ScalePartyModal({ onHide, show }) {
+export default function ScalePartyModal({ onHide, show, maxPartyID }) {
 
   const [list, setList] = useState([])
+  
+  const partyIDs = list.map(list => list.PartyID);
+  const maxPartyID = Math.max(...partyIDs);
+  console.log(maxPartyID)
   const [partyData, setPartyData] = useState({
     PartyID:1,
     PartyName:"Mubashar Murtza"
   })
-
   const handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value
@@ -44,9 +47,9 @@ export default function ScalePartyModal({ onHide, show }) {
         <Modal.Body>
           <label class="col-form-label">PartyID:</label>
           <input
-            type="text"
+            type="number"
             name="PartyID"
-            value={partyData.PartyID}
+            value={maxPartyID}
             className="form-control"
             id="PartyID"
             onChange={handleChange}
