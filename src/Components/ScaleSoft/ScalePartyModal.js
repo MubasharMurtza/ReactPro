@@ -10,23 +10,28 @@ export default function ScalePartyModal({ onHide, show, maxPartyID }) {
     PartyID:1,
     PartyName:"Mubashar Murtza"
   })
+  
   const handleChange = (e) => {
     const name = e.target.name
     const value = e.target.value
     console.log(value)
     setPartyData({...partyData,[name]:value})
-  }
-  const newData = {...partyData}
+   
+      
+}
+  const newData = {...partyData} 
   
   const handleSubmit = (e) => {
     e.preventDefault();
     setList([...list, newData])
-    axios.post('https://localhost:44327/api/scaleparty',{PartyID:partyData.PartyID, PartyName:partyData.PartyName})
+    axios.post('https://localhost:44327/api/scaleparty',{PartyID:{maxPartyID}, PartyName:partyData.PartyName})
     .then(res => {
       window.location.reload()
     })
     .catch((error) => {alert(error)})
+  
   }
+
 
   return (
     <>
@@ -48,10 +53,9 @@ export default function ScalePartyModal({ onHide, show, maxPartyID }) {
             type="number"
             name="PartyID"
             value={maxPartyID}
-            defaultValue={maxPartyID}
             className="form-control"
             id="PartyID"
-            onChange={handleChange}
+            on={handleChange}
           />
 
           <label class="col-form-label">PartyName:</label>
