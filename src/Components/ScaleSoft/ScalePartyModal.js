@@ -55,7 +55,11 @@ export default function ScalePartyModal({ onHide, show, maxPartyID }) {
             value={maxPartyID}
             className="form-control"
             id="PartyID"
+<<<<<<< HEAD
             on={handleChange}
+=======
+            onFocus={handleChange}
+>>>>>>> 54db6e2eb974c46d6d409ccd6c9b8760fe6de733
           />
 
           <label class="col-form-label">PartyName:</label>
