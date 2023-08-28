@@ -37,7 +37,7 @@ function SearchBar({ list, column }) {
               <td>{p.PartyID}</td>
               <td>{p.PartyName}</td>
               <td>
-                <Button variant="info" onClick={}>Edit</Button>
+                <Button variant="info" onClick="">Edit</Button>
               </td>
               <td>
                 <Button variant="danger">Delete</Button>
