@@ -16,13 +16,13 @@ const dataArray = [
     icon: <FaSign />,
   },
   {
-    path: "/partyM",
-    name: "PartyM",
+    path: "/Customer",
+    name: "Customer",
     icon: <FaSign />,
   },
   {
-    path: "/gateparty",
-    name: "GateParty",
+    path: "/Partyp",
+    name: "Partyp",
     icon: <FaSign />,
   },
   {

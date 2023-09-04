@@ -6,13 +6,17 @@ export default function ForTest() {
         PartyID:1,
         PartyName:"Mubashar"
     })
-
-    
+    const [valPartyID, setValPartyID] = useState()
+    const PID = (e) => {
+        setInputValue({...inputValue,PartyID:e.target.value})
+    }
+    console.log(inputValue)
+    const PName = (e) => {}
 
   return (
     <>
-        <input type='number'value="" name='PartyID' />
-        <input type='number'value="" name='PartyName' />
+        <input type='number'value={inputValue.PartyID} name='PartyID' onChange={PID} />
+        <input type='text'value={inputValue.PartyName} name='PartyName' onChange={PName} />
     </>
   )
 }

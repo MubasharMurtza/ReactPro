@@ -11,8 +11,8 @@ export default function Navigation() {
               <Nav style={{ marginLeft:"30px" }}>
                   <NavLink style={{ fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/">Home</NavLink>
                   <NavLink style={{ marginLeft:"20px", fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/party">Party</NavLink>
-                  <NavLink style={{ marginLeft:"20px", fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/partyM">PartyM</NavLink>
-                  <NavLink style={{ marginLeft:"20px", fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/gateparty">GateParty</NavLink>
+                  <NavLink style={{ marginLeft:"20px", fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/party">PartyM</NavLink>
+                  <NavLink style={{ marginLeft:"20px", fontSize:"20px", textDecoration:"none" }} className="d-inline p-2 bg-success text-white" to="/Partyp">Partyp </NavLink>
               </Nav>       
           </Navbar.Collapse>
       </Navbar>

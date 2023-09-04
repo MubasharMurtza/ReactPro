@@ -16,9 +16,8 @@ export default function ScalePartyModal({ onHide, show, maxPartyID }) {
     const value = e.target.value
     console.log(value)
     setPartyData({...partyData,[name]:value})
-   
-      
 }
+
   const newData = {...partyData} 
   
   const handleSubmit = (e) => {
@@ -55,11 +54,7 @@ export default function ScalePartyModal({ onHide, show, maxPartyID }) {
             value={maxPartyID}
             className="form-control"
             id="PartyID"
-<<<<<<< HEAD
-            on={handleChange}
-=======
             onFocus={handleChange}
->>>>>>> 54db6e2eb974c46d6d409ccd6c9b8760fe6de733
           />
 
           <label class="col-form-label">PartyName:</label>
