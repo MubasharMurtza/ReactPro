@@ -1,6 +1,6 @@
 import React from "react";
 import "./Sidebar.css";
-import { FaSign, FaSearch, FaHome } from "react-icons/fa";
+import { FaSign, FaSearch, FaHome, FaSchool } from "react-icons/fa";
 import { AnimatePresence, motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import SubArr from "./SubArr";
@@ -86,6 +86,22 @@ const dataArray = [
       },
       {
         path: "/page2",
+        name: "Page2",
+        icon: <FaHome />,
+      }
+    ]
+  },
+  {
+    name: "SchoolSoft",
+    icon: <FaSign />,
+    subArray: [
+      {
+        path: "/students",
+        name: "students",
+        icon: <FaSchool />,
+      },
+      {
+        path: "",
         name: "Page2",
         icon: <FaHome />,
       }
