@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Form, Row, Stack, Button, Table } from "react-bootstrap";
+import { FaPenFancy, FaTrash } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import StudentUpdate from "./StudentUpdate";
@@ -26,7 +27,6 @@ export default function Students() {
   return (
     <>
       <Row>
-        <h5 className="text-center bg-secondary text-white">Students</h5>
         <Stack direction="horizontal" gap={2}>
           <Form.Label className="mt-2 fw-normal">Search:</Form.Label>
           <Form.Control
@@ -54,7 +54,8 @@ export default function Students() {
               <td>{student.StudentID}</td>
               <td>{student.StudentName}</td>
               <td>{student.FatherName}</td>
-              <td>{student.JoiningDate}</td>
+              <td>{new Date(student.JoiningDate).toDateString()}</td>
+              <td>{new Date(student.DOB).toDateString()}</td>
               <td>{student.ClassID}</td>
               <td>{student.SectionID}</td>
               <td>{student.Fee}</td>
@@ -63,11 +64,11 @@ export default function Students() {
               <td>{student.ContactNo}</td>
               <td>
                 <Button variant="info" onClick={() => setShow(true)}>
-                  Edit
+                <FaPenFancy />
                 </Button>
               </td>
               <td>
-                <Button variant="danger">Delete</Button>
+                <Button variant="danger"><FaTrash /></Button>
               </td>
             </tr>
           ))}
