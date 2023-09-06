@@ -4,9 +4,11 @@ import { FaPenFancy, FaTrash } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import StudentUpdate from "./StudentUpdate";
+import AddStudent from "./AddStudent";
 
 export default function Students() {
-  const [show, setShow] = useState(false);
+  const [addShow, setAddShow] = useState(false);
+  const [editShow, setEditShow] = useState(false);
   const [students, setStudents] = useState([]);
   const [column, setColumn] = useState([]);
 
@@ -27,8 +29,8 @@ export default function Students() {
   return (
     <>
       <Row>
-        <Stack direction="horizontal" gap={2}>
-          <Form.Label className="mt-2 fw-normal">Search:</Form.Label>
+        <Stack direction="horizontal">
+          <Form.Label className="mt-2 fw-bold">Search:</Form.Label>
           <Form.Control
             style={{ width: "300px" }}
             type="text"
@@ -36,8 +38,12 @@ export default function Students() {
             value={searchTerm}
             onChange={handleChange}
           />
+          <Button variant="info" onClick={() => setAddShow(true)}>
+            Add New Student
+          </Button>
         </Stack>
       </Row>
+      <AddStudent show={addShow} onHide={() => setAddShow(false)} />
       <Table className="table table striped bordered hover size=sm">
         <thead>
           <tr>
@@ -63,18 +69,20 @@ export default function Students() {
               <td>{student.BForm}</td>
               <td>{student.ContactNo}</td>
               <td>
-                <Button variant="info" onClick={() => setShow(true)}>
-                <FaPenFancy />
+                <Button variant="info" onClick={() => setEditShow(true)}>
+                  <FaPenFancy />
                 </Button>
               </td>
               <td>
-                <Button variant="danger"><FaTrash /></Button>
+                <Button variant="danger">
+                  <FaTrash />
+                </Button>
               </td>
             </tr>
           ))}
         </tbody>
       </Table>
-      <StudentUpdate show={show} onHide={() => setShow(false)} />
+      <StudentUpdate show={editShow} onHide={() => setEditShow(false)} />
     </>
   );
 }

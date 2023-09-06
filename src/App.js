@@ -8,11 +8,10 @@ import AddStudent from "./Components/SchoolSoft/AddStudent";
 function App() {
   return (
     <>
-      {/* <BrowserRouter>
+      <BrowserRouter>
       <FunctionF />
-      </BrowserRouter> */}
+      </BrowserRouter>
       {/* <ForTest /> */}
-      <AddStudent />
     </>
   );
 }
