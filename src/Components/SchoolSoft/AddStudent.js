@@ -13,8 +13,8 @@ function AddStudent({ show, onHide }) {
     FatherName: "",
     JoiningDate: "",
     DateOfBirth: "",
-    Class: "",
-    Section: "",
+    ClassID: "",
+    SectionID: "",
     Fee: "",
     IdentityCard: "",
     Bform: "",
@@ -22,7 +22,7 @@ function AddStudent({ show, onHide }) {
   });
 
   const handleChange = (e) => {
-    const name = e.target.name;
+    const name = e.target.id;
     const value = e.target.value;
     console.log(value);
     setStudentData({ ...studentData, [name]: value });
@@ -39,9 +39,9 @@ function AddStudent({ show, onHide }) {
         StudentName: studentData.StudentName,
         FatherName: studentData.FatherName,
         JoiningDate: studentData.JoiningDate,
-        DateOfBirth: studentData.DateOfBirth,
-        Class: studentData.Class,
-        Section: studentData.Section,
+        DOB: studentData.DateOfBirth,
+        ClassID: studentData.ClassID,
+        SectionID: studentData.SectionID,
         Fee: studentData.Fee,
         IdentityCard: studentData.IdentityCard,
         Bform: studentData.Bform,
@@ -65,78 +65,78 @@ function AddStudent({ show, onHide }) {
           <Form.Label>Student ID:</Form.Label>
           <Form.Control
             type="number"
-            id="studentID"
-            //value={students.studentid}
+            id="StudentID"
+            //value="{studentData.StudentID}"
             onChange={handleChange}
           />
           <Form.Label>Student Name:</Form.Label>
           <Form.Control
             type="text"
-            id="studentName"
-            //value={data.studName}
+            id="StudentName"
+            //value={studentData.StudentName}
             onChange={handleChange}
           />
           <Form.Label>Father Name:</Form.Label>
           <Form.Control
             type="text"
-            id="fatherName"
-            //value={stdFather}
+            id="FatherName"
+            //value={studentData.FatherName}
             onChange={handleChange}
           />
           <Form.Label>Joining Date:</Form.Label>
           <Form.Control
             type="text"
-            id="fatherName"
-            //value={stdFather}
+            id="JoiningDate"
+            //value={studentData.JoiningDate}
             onChange={handleChange}
           />
           <Form.Label>Date Of Birth:</Form.Label>
           <Form.Control
             type="text"
-            id="fatherName"
-            //value={stdFather}
+            id="DOB"
+            //value={studentData.DateOfBirth}
             onChange={handleChange}
           />
           <Form.Label>Class:</Form.Label>
           <Form.Control
             type="text"
-            id="class"
-            //value={stdClass}
+            id="ClassID"
+            //value={studentData.ClassID}
             onChange={handleChange}
           />
           <Form.Label>Section:</Form.Label>
           <Form.Control
             type="text"
-            id="class"
-            //value={stdClass}
+            id="SectionID"
+            //value={studentData.SectionID}
             onChange={handleChange}
           />
           <Form.Label>Fee:</Form.Label>
           <Form.Control
             type="text"
-            id="class"
-            //value={stdClass}
+            id="Fee"
+            //value={studentData.Fee}
             onChange={handleChange}
           />
           <Form.Label>IdCard No:</Form.Label>
           <Form.Control
             type="text"
-            id="class"
-            //value={stdClass}
+            id="IdentityCard"
+            //value={studentData.IdentityCard}
             onChange={handleChange}
           />
           <Form.Label>Be Form:</Form.Label>
           <Form.Control
             type="text"
-            id="class"
-            //value={stdClass}
+            id="Bform"
+            //value={studentData.Bform}
             onChange={handleChange}
           />
           <Form.Label>Contect No:</Form.Label>
           <Form.Control
             type="tel"
-            id="contect"
-            //value={stdContect}
+            id="ContectNO"
+            //value={studentData.ContactNo}
             onChange={handleChange}
           />
         </Modal.Body>
