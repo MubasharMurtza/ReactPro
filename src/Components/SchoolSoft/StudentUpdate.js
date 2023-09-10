@@ -1,10 +1,35 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-function StudentUpdate({ show, onHide }) {
+function StudentUpdate({ show, onHide, student }) {
 
+  const [studentData, setStudentData] = useState()
+
+  // useEffect(() => {
+  //   axios.get("https://localhost:44327/api/students/101")
+  //        .then(res => console.log(res.data))
+  // }, [])
+    
+  
+  const handleChange = (e) => {
+    const name = e.target.id;
+    const value = e.target.value;
+    setStudentData({...studentData, [name]: value });
+  }
+
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    axios
+      .put("https://localhost:44327/api/students/" + student.StudentID, studentData)
+      .then((res) => {
+        alert("Student Updated Successfully");
+        window.location.reload();
+      });
+  
+  }
   return (
     <>
       <Modal show={show} onHide={onHide}>
@@ -16,85 +41,86 @@ function StudentUpdate({ show, onHide }) {
           <Form.Control
             type="number"
             id="StudentID"
-            //value="{studentData.StudentID}"
-            //onChange={handleChange}
+            disabled
+            defaultValue={student.StudentID}
+            onChange={handleChange}
           />
           <Form.Label>Student Name:</Form.Label>
           <Form.Control
             type="text"
             id="StudentName"
-            //value={studentData.StudentName}
-            //onChange={handleChange}
+            defaultValue={student.StudentName}
+            onChange={handleChange}
           />
           <Form.Label>Father Name:</Form.Label>
           <Form.Control
             type="text"
             id="FatherName"
-            //value={studentData.FatherName}
-            //onChange={handleChange}
+            defaultValue={student.FatherName}
+            onChange={handleChange}
           />
           <Form.Label>Joining Date:</Form.Label>
           <Form.Control
             type="text"
             id="JoiningDate"
-            //value={studentData.JoiningDate}
-            //onChange={handleChange}
+            defaultValue={student.JoiningDate}
+            onChange={handleChange}
           />
           <Form.Label>Date Of Birth:</Form.Label>
           <Form.Control
             type="text"
             id="DOB"
-            //value={studentData.DateOfBirth}
-            //onChange={handleChange}
+            defaultValue={student.DOB}
+            onChange={handleChange}
           />
           <Form.Label>Class:</Form.Label>
           <Form.Control
             type="text"
             id="ClassID"
-            //value={studentData.ClassID}
-            //onChange={handleChange}
+            defaultValue={student.ClassID}
+            onChange={handleChange}
           />
           <Form.Label>Section:</Form.Label>
           <Form.Control
             type="text"
             id="SectionID"
-            //value={studentData.SectionID}
-            //onChange={handleChange}
+            defaultValue={student.SectionID}
+            onChange={handleChange}
           />
           <Form.Label>Fee:</Form.Label>
           <Form.Control
             type="text"
             id="Fee"
-            //value={studentData.Fee}
-            //onChange={handleChange}
+            defaultValue={student.Fee}
+            onChange={handleChange}
           />
           <Form.Label>IdCard No:</Form.Label>
           <Form.Control
             type="text"
             id="IdentityCard"
-            //value={studentData.IdentityCard}
-            //onChange={handleChange}
+            defaultValue={student.IdentityCard}
+            onChange={handleChange}
           />
           <Form.Label>Be Form:</Form.Label>
           <Form.Control
             type="text"
             id="Bform"
-            //value={studentData.Bform}
-            //onChange={handleChange}
+            defaultValue={student.BForm}
+            onChange={handleChange}
           />
           <Form.Label>Contect No:</Form.Label>
           <Form.Control
             type="tel"
             id="ContectNO"
-            //value={studentData.ContactNo}
-            //onChange={handleChange}
+            defaultValue={student.ContactNo}
+            onChange={handleChange}
           />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={onHide}>
             Close
           </Button>
-          <Button variant="primary">
+          <Button variant="primary" onClick={handleUpdate}>
             Update
           </Button>
         </Modal.Footer>
