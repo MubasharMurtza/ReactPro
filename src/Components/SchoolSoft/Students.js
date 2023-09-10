@@ -11,6 +11,7 @@ export default function Students() {
   const [editShow, setEditShow] = useState(false);
   const [students, setStudents] = useState([]);
   const [column, setColumn] = useState([]);
+  const [studentUpdateData, setStudentUpdateData] = useState("");
 
   useEffect(() => {
     axios.get("https://localhost:44327/api/students").then((res) => {
@@ -26,6 +27,11 @@ export default function Students() {
   const filteredStudents = students.filter((student) => {
     return student.StudentName.toLowerCase().includes(searchTerm.toLowerCase());
   });
+  const handleUpdate = (student) => {
+    console.log(student.ContactNo)
+    setStudentUpdateData(student);
+    setEditShow(true);
+  }
   return (
     <>
       <Row>
@@ -69,7 +75,7 @@ export default function Students() {
               <td>{student.BForm}</td>
               <td>{student.ContactNo}</td>
               <td>
-                <Button variant="info" onClick={() => setEditShow(true)}>
+                <Button variant="info" onClick={() => handleUpdate(student)}>
                   <FaPenFancy />
                 </Button>
               </td>
@@ -82,7 +88,7 @@ export default function Students() {
           ))}
         </tbody>
       </Table>
-      <StudentUpdate show={editShow} onHide={() => setEditShow(false)} />
+      <StudentUpdate show={editShow} student={studentUpdateData} onHide={() => setEditShow(false)} />
     </>
   );
 }
