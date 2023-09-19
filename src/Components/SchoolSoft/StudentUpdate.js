@@ -4,38 +4,23 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-function StudentUpdate({ show, onHide, idd }) {
-
-  const [studentData, setStudentData] = useState({})
-  
-    useEffect(() => {
-      axios.get("https://localhost:44327/api/students/" + idd)
-      .then(res => console.log(res.data))
-      .catch(err => console.log(err))
-    }, [])
+function StudentUpdate({ show, onHide, id }) {
+    const [data, setData] = useState()
+    console.log();
+    const d = id;
     
-  // const handleChange = (e) => {
-  //   const name = e.target.id;
-  //   const value = e.target.value;
-  //   setStudentData({...studentData, [name]: value });
-  // }
-
-  const handleUpdate = (e) => {
-    // e.preventDefault();
-    // axios.put("https://localhost:44327/api/students/101", studentData)
-    //   .then(res => {
-    //     alert("Student Updated Successfully");
-    //     window.location.reload();
-    //   })
-    //   .catch(err => {
-    //     alert("Something went wrong");
-    //   })
-   }
+    useEffect(() => {
+          axios.get(`https://localhost:44327/api/students/102`)
+          .then(res => setData(res.data))
+          .catch(err => console.log(err))
+      }, [d])
+    
+      
   return (
     <>
       <Modal show={show} onHide={onHide}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Update Student Status</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         <Form.Label>Student ID:</Form.Label>
@@ -43,7 +28,7 @@ function StudentUpdate({ show, onHide, idd }) {
             type="number"
             id="StudentID"
             disabled
-            //defaultValue={student.StudentID}
+            //defaultValue={data.StudentID}
             //onChange={handleChange}
           />
           <Form.Label>Student Name:</Form.Label>
@@ -121,7 +106,7 @@ function StudentUpdate({ show, onHide, idd }) {
           <Button variant="secondary" onClick={onHide}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleUpdate}>
+          <Button variant="primary" onClick="">
             Update
           </Button>
         </Modal.Footer>
