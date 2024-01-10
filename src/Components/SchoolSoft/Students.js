@@ -13,7 +13,7 @@ export default function Students() {
   const [column, setColumn] = useState([]);
 
   useEffect(() => {
-    axios.get("https://localhost:44327/api/students").then((res) => {
+    axios.get("https://localhost:7249/api/students").then((res) => {
       setColumn(Object.keys(res.data[0]));
       setStudents(res.data);
     });
@@ -67,14 +67,14 @@ export default function Students() {
             <tr key={index}>
               <td>{student.StudentID}</td>
               <td>{student.StudentName}</td>
-              <td>{student.FatherName}</td>
+              {/* <td>{student.FatherName}</td>
               <td>{new Date(student.JoiningDate).toDateString()}</td>
               <td>{new Date(student.DOB).toDateString()}</td>
               <td>{student.ClassID}</td>
               <td>{student.SectionID}</td>
               <td>{student.Fee}</td>
               <td>{student.IdentityCard}</td>
-              <td>{student.BForm}</td>
+              <td>{student.BForm}</td> */}
               <td>{student.ContactNo}</td>
               <td>
                 <Button variant="info" onClick={() => UpdateStudent(student)}>

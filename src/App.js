@@ -1,17 +1,13 @@
 import React from "react";
 import "./index.css";
-import FunctionF from "./Components/FunctionF";
-import { BrowserRouter } from "react-router-dom";
-//import AddStudent from "./Components/SchoolSoft/AddStudent";
-//import ForTest from "./Components/ForTest";
+import Create from "./Components/CrudOperation/Create";
+//import FunctionF from "./Components/FunctionF";
+//import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-      <FunctionF />
-      </BrowserRouter>
-      {/* <ForTest /> */}
+      <Create />
     </>
   );
 }
