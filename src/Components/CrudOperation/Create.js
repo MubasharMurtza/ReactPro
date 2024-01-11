@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Form, FormLabel } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 export default function Create() {
   return (
@@ -9,23 +9,57 @@ export default function Create() {
           <h2 className="display-8 pb-1">Student Form</h2>
         </header>
       </div>
-      <section className="container">
-        <form className="row g-3">
-          <div className="col-md-5">
-            <label className="form-label">StudentName: </label>
-            <input style={{ width: 400 }} type="email" id="inputEmail4" />
-          </div>
-          <div className="col-md-5">
-            <label className="form-label">StudentName: </label>
-            <input style={{ width: 400 }} type="email" id="inputEmail4" />
-          </div>
-
-          <div className="col-2">
+      <section>
+        <Form className="row g-2">
+          <div className="container">
+            <input
+              className="form-control"
+              type="number"
+              id="StudentID"
+              placeholder="Student ID"
+              style={{
+                width: "10%",
+                display: "inline-block",
+              }}
+            />
+            <input
+              className="form-control"
+              type="text"
+              id="StudentName"
+              placeholder="Student Name"
+              style={{
+                width: "30%",
+                display: "inline-block",
+                marginLeft: "10PX",
+              }}
+            />
+            <input
+              className="form-control"
+              type="text"
+              id="ClassName"
+              placeholder="Class Name"
+              style={{
+                width: "20%",
+                display: "inline-block",
+                marginLeft: "10PX",
+              }}
+            />
+            <input
+              className="form-control"
+              type="text"
+              id="Contact"
+              placeholder="Contact No"
+              style={{
+                width: "20%",
+                display: "inline-block",
+                marginLeft: "10PX",
+              }}
+            />
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </div>
-        </form>
+        </Form>
       </section>
     </>
   );
